@@ -2,7 +2,9 @@
     "name": "Trevors First game - Copy - Copy",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0",
+        "animation": "*"
     },
     "files": [
         "main.blocks",
