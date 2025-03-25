@@ -4,7 +4,10 @@
     "dependencies": {
         "device": "*",
         "Timers": "github:microsoft/arcade-timers#v1.1.0",
-        "animation": "*"
+        "animation": "*",
+        "arcade-minimap": "github:microsoft/arcade-minimap#v0.6.1",
+        "light": "*",
+        "pxt-lanterns": "github:WoofWoofCodes/lanterns#v1.1.0"
     },
     "files": [
         "main.blocks",
@@ -20,7 +23,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.61",
+        "target": "2.0.40",
         "targetId": "arcade"
     },
     "supportedTargets": [
