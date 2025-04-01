@@ -7,7 +7,9 @@
         "animation": "*",
         "arcade-minimap": "github:microsoft/arcade-minimap#v0.6.1",
         "light": "*",
-        "pxt-lanterns": "github:WoofWoofCodes/lanterns#v1.1.0"
+        "pxt-lanterns": "github:WoofWoofCodes/lanterns#v1.1.0",
+        "arcade-sprite-util": "github:jwunderl/arcade-sprite-util#v0.4.1",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2"
     },
     "files": [
         "main.blocks",
@@ -23,7 +25,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "2.0.40",
+        "target": "2.0.46",
         "targetId": "arcade"
     },
     "supportedTargets": [

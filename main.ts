@@ -14,7 +14,28 @@ namespace SpriteKind {
     export const NPC7 = SpriteKind.create()
     export const NPC8 = SpriteKind.create()
     export const NPC9 = SpriteKind.create()
+    export const enemysssssssss = SpriteKind.create()
 }
+function enemySetup4 (mySprite: Sprite) {
+    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
+    statusbar.setColor(2, 12)
+    statusbar.attachToSprite(EnemyGhost302)
+}
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile38`, function (sprite, location) {
+    if (level == 1) {
+        tiles.setCurrentTilemap(tilemap`Shop`)
+        mySprite.setPosition(400, 250)
+        level_4_ghost = sprites.create(assets.image`Ghost1`, SpriteKind.NPC)
+        tiles.placeOnRandomTile(level_4_ghost, assets.tile`myTile17`)
+        animation.runMovementAnimation(
+        level_4_ghost,
+        animation.animationPresets(animation.shake),
+        2000,
+        true
+        )
+        level = 4
+    }
+})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     multilights.removeFlashlightSource(mySprite)
     multilights.addFlashLightSource(
@@ -78,12 +99,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC, function (sprite, otherSpri
         })
     }
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile36, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile34`, function (sprite, location) {
     if (level == 1) {
         tiles.setCurrentTilemap(tilemap`Space Craft`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(32, 43))
         level_103_sprite = sprites.create(assets.image`Ghost3`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_103_sprite, myTiles.tile29)
+        tiles.placeOnRandomTile(level_103_sprite, assets.tile`myTile27`)
         animation.runMovementAnimation(
         level_103_sprite,
         animation.animationPresets(animation.shake),
@@ -93,40 +114,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile36, function (sprite, locatio
         level = 103
     }
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile38, function (sprite, location) {
-    if (level == 1) {
-        tiles.setCurrentTilemap(tilemap`Mega Cave`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 21))
-        level_3_ghost = sprites.create(assets.image`Ghost10`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_3_ghost, myTiles.tile50)
-        animation.runMovementAnimation(
-        level_3_ghost,
-        animation.animationPresets(animation.shake),
-        2000,
-        true
-        )
-        level = 3
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile35, function (sprite, location) {
-    if (level == 1) {
-        tiles.setCurrentTilemap(tilemap`Space Craft`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(32, 43))
-        level_104_ghost = sprites.create(assets.image`Ghost6`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_104_ghost, myTiles.tile29)
-        animation.runMovementAnimation(
-        level_104_ghost,
-        animation.animationPresets(animation.shake),
-        2000,
-        true
-        )
-        level = 104
-    }
-})
-controller.down.onEvent(ControllerButtonEvent.Released, function () {
-    multilights.removeFlashlightSource(mySprite)
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile34, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile32`, function (sprite, location) {
     if (level == 102) {
         tiles.setCurrentTilemap(tilemap`My Tile map`)
         level = 1
@@ -148,19 +136,12 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile34, function (sprite, locatio
         tiles.placeOnTile(mySprite, tiles.getTileLocation(52, 29))
     }
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile46, function (sprite, location) {
-    if (level == 4) {
-        tiles.setCurrentTilemap(tilemap`My Tile map`)
-        mySprite.setPosition(250, 300)
-        level = 1
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
     if (level == 1) {
         tiles.setCurrentTilemap(tilemap`Space Craft`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(32, 43))
         level_102_ghost = sprites.create(assets.image`Ghost4`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_102_ghost, myTiles.tile29)
+        tiles.placeOnRandomTile(level_102_ghost, assets.tile`myTile27`)
         animation.runMovementAnimation(
         level_102_ghost,
         animation.animationPresets(animation.shake),
@@ -168,6 +149,29 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile6, function (sprite, location
         true
         )
         level = 102
+    }
+})
+controller.down.onEvent(ControllerButtonEvent.Released, function () {
+    multilights.removeFlashlightSource(mySprite)
+})
+function enemySetup2 (mySprite: Sprite) {
+    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
+    statusbar.setColor(2, 12)
+    statusbar.attachToSprite(EnemyGhost301)
+}
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile33`, function (sprite, location) {
+    if (level == 1) {
+        tiles.setCurrentTilemap(tilemap`Space Craft`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(32, 43))
+        level_104_ghost = sprites.create(assets.image`Ghost6`, SpriteKind.NPC)
+        tiles.placeOnRandomTile(level_104_ghost, assets.tile`myTile27`)
+        animation.runMovementAnimation(
+        level_104_ghost,
+        animation.animationPresets(animation.shake),
+        2000,
+        true
+        )
+        level = 104
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -181,47 +185,12 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     2.5
     )
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile52, function (sprite, location) {
-    if (level == 11) {
-        tiles.setCurrentTilemap(tilemap`My Tile map`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(55, 52))
-        level = 1
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile40, function (sprite, location) {
-    if (level == 1) {
-        tiles.setCurrentTilemap(tilemap`Shop`)
-        mySprite.setPosition(400, 250)
-        level_4_ghost = sprites.create(assets.image`Ghost1`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_4_ghost, myTiles.tile19)
-        animation.runMovementAnimation(
-        level_4_ghost,
-        animation.animationPresets(animation.shake),
-        2000,
-        true
-        )
-        level = 4
-    }
-})
-controller.right.onEvent(ControllerButtonEvent.Released, function () {
-    multilights.removeFlashlightSource(mySprite)
-})
-controller.left.onEvent(ControllerButtonEvent.Released, function () {
-    multilights.removeFlashlightSource(mySprite)
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile45, function (sprite, location) {
-    if (level == 13) {
-        tiles.setCurrentTilemap(tilemap`My Tile map`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(73, 12))
-        level = 1
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile44, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile42`, function (sprite, location) {
     if (level == 1) {
         tiles.setCurrentTilemap(tilemap`Cave4`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 18))
         level_11_ghost = sprites.create(assets.image`Ghost10`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_11_ghost, myTiles.tile50)
+        tiles.placeOnRandomTile(level_11_ghost, assets.tile`myTile48`)
         animation.runMovementAnimation(
         level_11_ghost,
         animation.animationPresets(animation.shake),
@@ -231,27 +200,50 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile44, function (sprite, locatio
         level = 11
     }
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile37, function (sprite, location) {
+controller.right.onEvent(ControllerButtonEvent.Released, function () {
+    multilights.removeFlashlightSource(mySprite)
+})
+controller.left.onEvent(ControllerButtonEvent.Released, function () {
+    multilights.removeFlashlightSource(mySprite)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile39`, function (sprite, location) {
     if (level == 1) {
-        tiles.setCurrentTilemap(tilemap`Space Craft`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(32, 43))
-        level_101_ghost = sprites.create(assets.image`Ghost2`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_101_ghost, myTiles.tile29)
+        tiles.setCurrentTilemap(tilemap`Cave1`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 20))
+        level_105_ghost = sprites.create(assets.image`Ghost7`, SpriteKind.NPC)
+        tiles.placeOnRandomTile(level_105_ghost, assets.tile`myTile48`)
         animation.runMovementAnimation(
-        level_101_ghost,
+        level_105_ghost,
         animation.animationPresets(animation.shake),
         2000,
         true
         )
-        level = 101
+        level = 105
     }
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, location) {
+statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
+    sprites.destroy(status.spriteAttachedTo())
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile37`, function (sprite, location) {
+    if (level == 3) {
+        tiles.setCurrentTilemap(tilemap`My Tile map`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(41, 33))
+        level = 1
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile49`, function (sprite, location) {
+    if (level == 105) {
+        tiles.setCurrentTilemap(tilemap`My Tile map`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(30, 10))
+        level = 1
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile40`, function (sprite, location) {
     if (level == 1) {
         tiles.setCurrentTilemap(tilemap`Cave2`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 21))
         gray_line_head_ghost = sprites.create(assets.image`Ghost8`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(gray_line_head_ghost, myTiles.tile50)
+        tiles.placeOnRandomTile(gray_line_head_ghost, assets.tile`myTile48`)
         animation.runMovementAnimation(
         gray_line_head_ghost,
         animation.animationPresets(animation.shake),
@@ -272,8 +264,49 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     2.5
     )
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile36`, function (sprite, location) {
+    if (level == 1) {
+        tiles.setCurrentTilemap(tilemap`Mega Cave`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 21))
+        level_3_ghost = sprites.create(assets.image`Ghost10`, SpriteKind.NPC)
+        tiles.placeOnRandomTile(level_3_ghost, assets.tile`myTile48`)
+        animation.runMovementAnimation(
+        level_3_ghost,
+        animation.animationPresets(animation.shake),
+        2000,
+        true
+        )
+        level = 3
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile50`, function (sprite, location) {
+    if (level == 11) {
+        tiles.setCurrentTilemap(tilemap`My Tile map`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(55, 52))
+        level = 1
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite, location) {
+    if (level == 4) {
+        tiles.setCurrentTilemap(tilemap`My Tile map`)
+        mySprite.setPosition(250, 300)
+        level = 1
+    }
+})
+function enemySetup3 (mySprite: Sprite) {
+    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
+    statusbar.setColor(2, 12)
+    statusbar.attachToSprite(EnemyGhost303)
+}
 controller.up.onEvent(ControllerButtonEvent.Released, function () {
     multilights.removeFlashlightSource(mySprite)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite, location) {
+    if (level == 13) {
+        tiles.setCurrentTilemap(tilemap`My Tile map`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(73, 12))
+        level = 1
+    }
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     multilights.removeFlashlightSource(mySprite)
@@ -286,27 +319,22 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     2.5
     )
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile41, function (sprite, location) {
-    if (level == 1) {
-        tiles.setCurrentTilemap(tilemap`Cave1`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 20))
-        level_105_ghost = sprites.create(assets.image`Ghost7`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_105_ghost, myTiles.tile50)
-        animation.runMovementAnimation(
-        level_105_ghost,
-        animation.animationPresets(animation.shake),
-        2000,
-        true
-        )
-        level = 105
-    }
-})
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile43, function (sprite, location) {
+function enemySetup5 (mySprite: Sprite) {
+    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
+    statusbar.setColor(2, 12)
+    statusbar.attachToSprite(EnemyGhost304)
+}
+function enemySetup (mySprite: Sprite) {
+    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
+    statusbar.setColor(2, 12)
+    statusbar.attachToSprite(EnemyGhost300)
+}
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile41`, function (sprite, location) {
     if (level == 1) {
         tiles.setCurrentTilemap(tilemap`Cave3`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 14))
         level_10_ghost = sprites.create(assets.image`Ghost9`, SpriteKind.NPC)
-        tiles.placeOnRandomTile(level_10_ghost, myTiles.tile50)
+        tiles.placeOnRandomTile(level_10_ghost, assets.tile`myTile48`)
         animation.runMovementAnimation(
         level_10_ghost,
         animation.animationPresets(animation.shake),
@@ -316,53 +344,37 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile43, function (sprite, locatio
         level = 10
     }
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile53, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile51`, function (sprite, location) {
     if (level == 10) {
         tiles.setCurrentTilemap(tilemap`My Tile map`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(31, 48))
         level = 1
     }
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile39, function (sprite, location) {
-    if (level == 3) {
-        tiles.setCurrentTilemap(tilemap`My Tile map`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(41, 33))
-        level = 1
-    }
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    sprites.destroy(sprite)
+    statusbars.getStatusBarAttachedTo(StatusBarKind.EnemyHealth, otherSprite).value += -5
+    info.changeScoreBy(1)
 })
-scene.onOverlapTile(SpriteKind.Player, myTiles.tile51, function (sprite, location) {
-    if (level == 105) {
-        tiles.setCurrentTilemap(tilemap`My Tile map`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(30, 10))
-        level = 1
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile35`, function (sprite, location) {
+    if (level == 1) {
+        tiles.setCurrentTilemap(tilemap`Space Craft`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(32, 43))
+        level_101_ghost = sprites.create(assets.image`Ghost2`, SpriteKind.NPC)
+        tiles.placeOnRandomTile(level_101_ghost, assets.tile`myTile27`)
+        animation.runMovementAnimation(
+        level_101_ghost,
+        animation.animationPresets(animation.shake),
+        2000,
+        true
+        )
+        level = 101
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    if (otherSprite == EnemyGhost300) {
-        timer.throttle("action", 3000, function () {
-            EnemyGhost300.sayText("I'm ready for action!", 3500, true)
-        })
-    }
-    if (otherSprite == EnemyGhost301) {
-        timer.throttle("action", 3000, function () {
-            EnemyGhost301.sayText("You've made me angry boy!", 3500, true)
-        })
-    }
-    if (otherSprite == EnemyGhost302) {
-        timer.throttle("action", 3000, function () {
-            EnemyGhost302.sayText("You must be lost son, get out of here or fight me!", 3500, true)
-        })
-    }
-    if (otherSprite == EnemyGhost303) {
-        timer.throttle("action", 3000, function () {
-            EnemyGhost303.sayText("You will pay for being here in my fields boy! ", 3500, true)
-        })
-    }
-    if (otherSprite == EnemyGhost304) {
-        timer.throttle("action", 3000, function () {
-            EnemyGhost304.sayText("Your just a kid, you cant be here!", 3500, true)
-        })
-    }
+    info.changeLifeBy(-1)
+    sprites.destroy(otherSprite, effects.disintegrate, 500)
+    scene.cameraShake(4, 500)
 })
 let level_3_ghost: Sprite = null
 let level_104_ghost: Sprite = null
@@ -374,6 +386,7 @@ let level_11_ghost: Sprite = null
 let level_10_ghost: Sprite = null
 let gray_line_head_ghost: Sprite = null
 let level_4_ghost: Sprite = null
+let statusbar: StatusBarSprite = null
 let level = 0
 let EnemyGhost304: Sprite = null
 let EnemyGhost303: Sprite = null
@@ -381,8 +394,8 @@ let EnemyGhost302: Sprite = null
 let EnemyGhost301: Sprite = null
 let EnemyGhost300: Sprite = null
 let mySprite: Sprite = null
-multilights.toggleLighting(true)
-mySprite = sprites.create(assets.image`Harrison`, SpriteKind.Player)
+multilights.toggleLighting(false)
+mySprite = sprites.create(assets.image`Harrison0`, SpriteKind.Player)
 multilights.addLightSource(
 mySprite,
 12,
@@ -394,15 +407,20 @@ controller.moveSprite(mySprite, 150, 150)
 scene.cameraFollowSprite(mySprite)
 tiles.setCurrentTilemap(tilemap`My Tile map`)
 EnemyGhost300 = sprites.create(assets.image`myImage1`, SpriteKind.Enemy)
-tiles.placeOnRandomTile(EnemyGhost300, myTiles.tile18)
+tiles.placeOnTile(EnemyGhost300, tiles.getTileLocation(16, 20))
+enemySetup(EnemyGhost300)
 EnemyGhost301 = sprites.create(assets.image`myImage2`, SpriteKind.Enemy)
-tiles.placeOnRandomTile(EnemyGhost301, myTiles.tile18)
+tiles.placeOnTile(EnemyGhost301, tiles.getTileLocation(65, 20))
+enemySetup(EnemyGhost301)
 EnemyGhost302 = sprites.create(assets.image`myImage3`, SpriteKind.Enemy)
-tiles.placeOnRandomTile(EnemyGhost302, myTiles.tile18)
+tiles.placeOnTile(EnemyGhost302, tiles.getTileLocation(25, 45))
+enemySetup(EnemyGhost302)
 EnemyGhost303 = sprites.create(assets.image`myImage4`, SpriteKind.Enemy)
-tiles.placeOnRandomTile(EnemyGhost303, myTiles.tile18)
+tiles.placeOnTile(EnemyGhost303, tiles.getTileLocation(65, 50))
+enemySetup(EnemyGhost303)
 EnemyGhost304 = sprites.create(assets.image`myImage5`, SpriteKind.Enemy)
-tiles.placeOnRandomTile(EnemyGhost304, myTiles.tile18)
+enemySetup(EnemyGhost304)
+tiles.placeOnTile(EnemyGhost304, tiles.getTileLocation(40, 40))
 level = 1
 game.onUpdate(function () {
     if (level != 1) {
@@ -451,5 +469,32 @@ game.onUpdate(function () {
     }
     if (level != 105) {
         sprites.destroy(level_105_ghost)
+    }
+})
+forever(function () {
+    if (spriteutils.distanceBetween(mySprite, EnemyGhost300) < 100) {
+        EnemyGhost300.follow(mySprite, 10)
+    } else {
+        EnemyGhost300.follow(null)
+    }
+    if (spriteutils.distanceBetween(mySprite, EnemyGhost301) < 100) {
+        EnemyGhost301.follow(mySprite, 10)
+    } else {
+        EnemyGhost301.follow(null)
+    }
+    if (spriteutils.distanceBetween(mySprite, EnemyGhost302) < 100) {
+        EnemyGhost302.follow(mySprite, 10)
+    } else {
+        EnemyGhost302.follow(null)
+    }
+    if (spriteutils.distanceBetween(mySprite, EnemyGhost303) < 100) {
+        EnemyGhost303.follow(mySprite, 10)
+    } else {
+        EnemyGhost303.follow(null)
+    }
+    if (spriteutils.distanceBetween(mySprite, EnemyGhost304) < 100) {
+        EnemyGhost304.follow(mySprite, 10)
+    } else {
+        EnemyGhost304.follow(null)
     }
 })
