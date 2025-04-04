@@ -15,11 +15,7 @@ namespace SpriteKind {
     export const NPC8 = SpriteKind.create()
     export const NPC9 = SpriteKind.create()
     export const enemysssssssss = SpriteKind.create()
-}
-function enemySetup4 (mySprite: Sprite) {
-    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
-    statusbar.setColor(2, 12)
-    statusbar.attachToSprite(EnemyGhost302)
+    export const Key = SpriteKind.create()
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile38`, function (sprite, location) {
     if (level == 1) {
@@ -154,11 +150,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, l
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
     multilights.removeFlashlightSource(mySprite)
 })
-function enemySetup2 (mySprite: Sprite) {
-    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
-    statusbar.setColor(2, 12)
-    statusbar.attachToSprite(EnemyGhost301)
-}
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile33`, function (sprite, location) {
     if (level == 1) {
         tiles.setCurrentTilemap(tilemap`Space Craft`)
@@ -220,6 +211,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile39`, function (sprite, 
         )
         level = 105
     }
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Key, function (sprite, otherSprite) {
+	
 })
 statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
     sprites.destroy(status.spriteAttachedTo())
@@ -293,11 +287,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite, 
         level = 1
     }
 })
-function enemySetup3 (mySprite: Sprite) {
-    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
-    statusbar.setColor(2, 12)
-    statusbar.attachToSprite(EnemyGhost303)
-}
 controller.up.onEvent(ControllerButtonEvent.Released, function () {
     multilights.removeFlashlightSource(mySprite)
 })
@@ -319,15 +308,22 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     2.5
     )
 })
-function enemySetup5 (mySprite: Sprite) {
-    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
-    statusbar.setColor(2, 12)
-    statusbar.attachToSprite(EnemyGhost304)
-}
 function enemySetup (mySprite: Sprite) {
-    statusbar = statusbars.create(15, 4, StatusBarKind.EnemyHealth)
+    statusbar = statusbars.create(20, 4, StatusBarKind.EnemyHealth)
     statusbar.setColor(2, 12)
     statusbar.attachToSprite(EnemyGhost300)
+    statusbar2 = statusbars.create(20, 4, StatusBarKind.EnemyHealth)
+    statusbar2.setColor(2, 12)
+    statusbar2.attachToSprite(EnemyGhost301)
+    statusbar3 = statusbars.create(20, 4, StatusBarKind.EnemyHealth)
+    statusbar3.attachToSprite(EnemyGhost302)
+    statusbar3.setColor(2, 12)
+    statusbar4 = statusbars.create(20, 4, StatusBarKind.EnemyHealth)
+    statusbar4.setColor(2, 12)
+    statusbar4.attachToSprite(EnemyGhost303)
+    statusbar5 = statusbars.create(20, 4, StatusBarKind.EnemyHealth)
+    statusbar5.setColor(2, 12)
+    statusbar5.attachToSprite(EnemyGhost304)
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile41`, function (sprite, location) {
     if (level == 1) {
@@ -376,6 +372,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     sprites.destroy(otherSprite, effects.disintegrate, 500)
     scene.cameraShake(4, 500)
 })
+let statusbar5: StatusBarSprite = null
+let statusbar4: StatusBarSprite = null
+let statusbar3: StatusBarSprite = null
+let statusbar2: StatusBarSprite = null
+let statusbar: StatusBarSprite = null
 let level_3_ghost: Sprite = null
 let level_104_ghost: Sprite = null
 let level_103_sprite: Sprite = null
@@ -386,7 +387,6 @@ let level_11_ghost: Sprite = null
 let level_10_ghost: Sprite = null
 let gray_line_head_ghost: Sprite = null
 let level_4_ghost: Sprite = null
-let statusbar: StatusBarSprite = null
 let level = 0
 let EnemyGhost304: Sprite = null
 let EnemyGhost303: Sprite = null
@@ -394,7 +394,7 @@ let EnemyGhost302: Sprite = null
 let EnemyGhost301: Sprite = null
 let EnemyGhost300: Sprite = null
 let mySprite: Sprite = null
-multilights.toggleLighting(false)
+multilights.toggleLighting(true)
 mySprite = sprites.create(assets.image`Harrison0`, SpriteKind.Player)
 multilights.addLightSource(
 mySprite,
@@ -402,7 +402,6 @@ mySprite,
 12,
 2.5
 )
-let anim = animation.createAnimation(ActionKind.Jumping, 1000)
 controller.moveSprite(mySprite, 150, 150)
 scene.cameraFollowSprite(mySprite)
 tiles.setCurrentTilemap(tilemap`My Tile map`)
@@ -422,6 +421,43 @@ EnemyGhost304 = sprites.create(assets.image`myImage5`, SpriteKind.Enemy)
 enemySetup(EnemyGhost304)
 tiles.placeOnTile(EnemyGhost304, tiles.getTileLocation(40, 40))
 level = 1
+let Key0 = sprites.create(img`
+    ................................
+    ................................
+    ................................
+    ................................
+    ................................
+    ................................
+    ................................
+    ................................
+    ............fffff...............
+    ...........f55555f..............
+    ..........f45fff54f.............
+    ..........f5f...f5f.............
+    ..........f5f...f5f.............
+    ..........f5f...f5f.............
+    ..........f55fff45f.............
+    ...........f54555f..............
+    ............ff5ff...............
+    .............f5f................
+    .............f5f................
+    .............f5f................
+    .............f4f................
+    .............f5f................
+    .............f5ffff.............
+    .............f5554f.............
+    .............f5ffff.............
+    .............f5f................
+    .............f4f................
+    .............f5ffff.............
+    .............f5545f.............
+    .............ffffff.............
+    ................................
+    ................................
+    `, SpriteKind.Key)
+tiles.placeOnTile(Key0, tiles.getTileLocation(8, 1))
+let NumberofKeys = 0
+tiles.placeOnTile(Key0, tiles.getTileLocation(9, 9))
 game.onUpdate(function () {
     if (level != 1) {
         sprites.destroy(EnemyGhost300)
