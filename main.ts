@@ -54,7 +54,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite5, 
     }
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    projectile = sprites.createProjectileFromSprite(assets.image`right_projectile`, mySprite2, 50, 0)
+    projectile = sprites.createProjectileFromSprite(assets.image`left_projectile0`, mySprite2, 50, 0)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile37`, function (sprite10, location8) {
     if (level == 3) {
@@ -306,9 +306,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile51`, function (sprite18
         level = 1
     }
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Key, function (sprite9, otherSprite2) {
-	
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite15, location13) {
     if (level == 4) {
         tiles.setCurrentTilemap(tilemap`My Tile map`)
@@ -374,7 +371,6 @@ let level_102_ghost: Sprite = null
 let level_4_ghost: Sprite = null
 let level = 0
 let mySprite2: Sprite = null
-let NumberofKeys = 0
 class ActionKind {
     static Walking: number
     private ___Walking_is_set: boolean
@@ -479,6 +475,7 @@ let Key0 = sprites.create(img`
     ................................
     `, SpriteKind.Key)
 tiles.placeOnTile(Key0, tiles.getTileLocation(8, 1))
+let NumberofKeys = 0
 tiles.placeOnTile(Key0, tiles.getTileLocation(9, 9))
 game.onUpdate(function () {
     if (level != 1) {
