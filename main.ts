@@ -160,6 +160,11 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile40`, function (sprite12
         level = 13
     }
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Key, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite)
+    NumberOfKeys += 1
+    mySprite2.sayText("I got the key!")
+})
 statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
     sprites.destroy(status.spriteAttachedTo())
 })
@@ -353,6 +358,27 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile41`, function (sprite17
         level = 10
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile53`, function (sprite, location) {
+    if (NumberOfKeys > 0) {
+        tiles.setTileAt(location, assets.tile`myTile54`)
+        tiles.setTileAt(tiles.getTileLocation(0, 3), assets.tile`myTile16`)
+        tiles.setTileAt(tiles.getTileLocation(1, 3), assets.tile`myTile16`)
+        tiles.setTileAt(tiles.getTileLocation(2, 3), assets.tile`myTile16`)
+        tiles.setTileAt(tiles.getTileLocation(3, 3), assets.tile`myTile16`)
+        tiles.setTileAt(tiles.getTileLocation(3, 2), assets.tile`myTile16`)
+        tiles.setTileAt(tiles.getTileLocation(3, 1), assets.tile`myTile16`)
+        tiles.setTileAt(tiles.getTileLocation(3, 0), assets.tile`myTile16`)
+        tiles.setWallAt(tiles.getTileLocation(0, 3), false)
+        tiles.setWallAt(tiles.getTileLocation(1, 3), false)
+        tiles.setWallAt(tiles.getTileLocation(2, 3), false)
+        tiles.setWallAt(tiles.getTileLocation(3, 3), false)
+        tiles.setWallAt(tiles.getTileLocation(3, 2), false)
+        tiles.setWallAt(tiles.getTileLocation(3, 1), false)
+        tiles.setWallAt(tiles.getTileLocation(3, 0), false)
+        NumberOfKeys += -1
+        mySprite2.sayText("I used the key!")
+    }
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(sprite)
     statusbars.getStatusBarAttachedTo(StatusBarKind.EnemyHealth, otherSprite).value += -25
@@ -363,6 +389,7 @@ let level_104_ghost: Sprite = null
 let level_103_sprite: Sprite = null
 let level_11_ghost: Sprite = null
 let level_10_ghost: Sprite = null
+let NumberOfKeys = 0
 let gray_line_head_ghost: Sprite = null
 let level_101_ghost: Sprite = null
 let level_105_ghost: Sprite = null
