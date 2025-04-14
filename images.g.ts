@@ -581,33 +581,33 @@ f 4 f 6 3 6 6 3 6 f 4 f .
 ................................
 ................................
 ................................
-...............f................
-..............d9d...............
-..............d99f..............
-..............d9f...............
-..............d9f...............
-..............d99f..............
-...............f99d.............
-...............fd99f............
-................df9f............
-................df9f............
-................df9f............
-...........f.f.fdf9f............
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+...........f.f.fdf..............
 ..........bfdfdfdfdfdfdfdfdfd...
 .bbbbbbbbbbfdfdfdfdfdfdfdfdfdf..
 ..........bfdfdfdfdfdfdfdfdfd...
-...........f.f.fdf9f............
-................df9f............
-................df9f............
-................df9f............
-...............fd99f............
-...............f99d.............
-..............d99f..............
-..............d9f...............
-..............d9f...............
-..............d99f..............
-..............d9d...............
-...............f................
+...........f.f.fdf..............
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
 ................................
 ................................
 `;
@@ -615,36 +615,139 @@ f 4 f 6 3 6 6 3 6 f 4 f .
             case "left_projectile0":return img`
 ................................
 ................................
-................f...............
-...............d9d..............
-..............f99d..............
-...............f9d..............
-...............f9d..............
-..............f99d..............
-.............d99f...............
-............f99df...............
-............f9fd................
-............f9fd................
-............f9fd................
-............f9fdf.f.f...........
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................f.f.f...........
 ...dfdfdfdfdfdfdfdfdfb..........
 ..fdfdfdfdfdfdfdfdfdfbbbbbbbbbb.
 ...dfdfdfdfdfdfdfdfdfb..........
-............f9fdf.f.f...........
-............f9fd................
-............f9fd................
-............f9fd................
-............f99df...............
-.............d99f...............
-..............f99d..............
-...............f9d..............
-...............f9d..............
-..............f99d..............
-...............d9d..............
-................f...............
+................f.f.f...........
 ................................
 ................................
 ................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+`;
+            case "image25":
+            case "myImage6":return img`
+ffffffffffffffffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffff2222222ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff222222ffff222222222ffff2222222ffffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffff2222222222f22222222222f22222222222ffffff222222ffffffffffffffffffffffffffffffffffffffffffffffff
+fffff2222222222222222fff22222222222222222ffff22222222fffffffffffffffffffffffffffffffffffffffffffffff
+fffff2222f2f2222222fffffff222222f2ff222222ff222222222fffffffffffffffffffffffffffffffffffffffffffffff
+ffff2222fffffff2222fffffff22222fffffff22225f2222f22225ffffffffffffffffffffffffffffffffffffffffffffff
+fff2222fffffffff22ff22fffff222fffffffff2222f222fff2225f5fffff2f2fffffff22222ffffffffffffffffffffffff
+ff222ffff22ffffff2222222fff22f222222ffff2222222ff22225f5f2222222222fff2222222fffffffffffffffffffffff
+f2222ff2222222ffff222222ffffff222222ffff222222ff2222255ff22222222222ff22222225ffffffffffffffffffffff
+f2222f22222222ffff2222222ffff22222222fff222222ff222255f5f2222fff2222ff222f2225f2ffffffffffffffffffff
+f222f222222222ffff2222222ffff22255222fff222222f22225555ff222ff22ff2225222f222552222fffffffffffffffff
+f222f2222552222ffff222222fff2225555222ff2222222222255f5f222ff2222f222222ff222522222ff2222fffffffffff
+2222f22255552222fff2222222fff22255222ffff222222222555fff2222222222222222ff2222222222222222ffffffffff
+2222f22255525222fff2222222fff222555222ff22222222225555f2222222222222222ff2222222f22222222222ffffffff
+f222f222525fff22fff2225222ffff22522222ff222222ff2225f2222fff22222f2222fff222222ff222222f2222ffffffff
+f222f2222fffff222fff2252222ff2222222ff22222222f2222252222ffff2222f2222fffffff22ff22222ff22225fffffff
+f2222222255fff222fff225222ffff22222ff22222222fff22222222ffffffffff222ffffffff2ffff222ffff2225f5fffff
+f2222f2222ffff222fff2252222fff22222ff2222222fffff222222ff2fffffff222fffffffff2ffff2fffffff2225ffffff
+ff222f2222225f222fff2222222ff22222ff22222222fffff22222ff2222ffff222222ffff22222fff2f22ffff222f5fffff
+ff222ff222222f222fff2252222fff222fff2222222f2fff22222fff22222fff222222fff222222ffff2222ffff2225fffff
+ff2222ff22222f222ff22222222fff222fff222222222fff22222fff222222f2222222fff222222ffff2222ffff22255ffff
+ffff22222f2225222fff2252222fff222fff222252222fff22222ffff2222f22222222fff222522ffff22222ffff2225ffff
+fffff222222225222ff22252222ff2222fff22225f522fff22222ffff222ffff222222fff222222fff2222222fff22255fff
+fffff5222222552222ff2252222ff2222fff22225f222fff222222fff22ffffff22222ffff22522ffff225222fff2225ffff
+ffffff5f222555222ff2225222fff2222fff222255f222ff2222222fffff2fffff2222fff222222fff2225222fff22255f5f
+fffffff5555555222ff22252222f22222fff22225f222fff22252222fff222ffff2222fff222522fff2225522fff2225ffff
+fffffffff5f55f222ff2225222ff22222fff22225f522fff22255222ff22222fff2222ffff22222ffff2255222ff22255fff
+ffffffff55f5f5222f22222222ff22222fff22225ff22fff22255222f222222fff2222fff222522fff2225522fff2225f5ff
+ffffffff22222f22ff22222222f222222fff22222f2222ff2222222ff2225222ff2222ffff22222fff2222222fff2225f5ff
+fffffff222222222ff2222222ff222222fff222222222fff2222222f22225222ff2222fff222222fff2222222fff2255ffff
+ffffff2222222222f22222222ff222522fff222222222fff222222ff22222222ff2222fff222222ffff222222ff222555fff
+fffff2222f22222ff22f22222f2225222fff222222222fff22222ffff222222ff22222ffff22f22fff22f2222ff222555fff
+fffff2222ffff22f22ffff22ff2225222ffff222f2222fff22f22fffff22222f222222ffffff222ffffff2222ff22555ffff
+fffff2222ffffff222fffffff222555222ffff2f222222ffff2222ffffff2ff2222222fffff2222ffff22222ff2225555fff
+ffff2222ffffff2222ffffff2222555222ffffff22222ffff2222222ffffff22222222ffff22222ffff22222ff222555ffff
+ffff222f222fff222f222f22222555f2222fff222222222f222252222ff222222552222222222222ff22222ff222555fffff
+ffff22222222f22222222222225555f22222f22222552222222552222222222555552222222252222222222f22225555ffff
+fffff222222222222222222225552f5ff2222222255522222225555222222555552f5f22222555222222222f222255ffffff
+fffff222222222252222222225555ffff52222225555222222555f5f5222255552f5f55222555552222222f22225552fffff
+ffffff525222225555522222555ff5fffff22222555ff522255555f5f22555552fffff5f555555f2222222f222555f5fffff
+fffffff5f5555555555552555555ffffff552555555fff5f55555fffff55552f5ffffff5f555f5ff55222f2222555fffffff
+fffffff5ff5255552ff5f55555fffffffff5f5555ff5fff5555f55fff5f5ff5ffffffffffff5f5fff2222f2225555fffffff
+fffffffffffff5f5ffffffff5ffffffffffffff5fffffff5ffff5fffffffffffffffffffffffffff222ff22255555fffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffff5fffffffffffffffffffffffffffff22222225555fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222225555fffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222255f5fffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22225555ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5555ff5fffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff555555fffffffffff
+fffffffff222252252ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5fffffffffffffff
+fffffff22222222222222ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5ffffffffffff
+ffffff2222222222222222ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffff2222222f222222222222f52ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffff22222fffffffff22222222222fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff22222fffffffffffff222222222ffffffffffffffffffffffffffffffffffffffffffffffff22ffffffff22222fffffff
+ff2222ffff2fffffffffff222222222fffffffffffffffffffffffffffffffffffffffffffff5222252fffff222222ffffff
+ff222fff2222222fffffffff2222225ffffffffffffffffffffffffffffffffffffffffffff222222222fff22222225fffff
+f222222222222222222fffffff222255ffffffffffffffffffffffffffffffffffffffffff2222fff22225f222ff225fffff
+f222f22225552222ff222ffff222255f5fffffffffffffffffffffffffffffffffffffffff222ff22ff2225222f22255ffff
+2222f22225552222f22222ff22225555ff522522fffff222ff222fffffffff222fffffffff222ff222f222222ff222555fff
+2222f2225552222f2222222222255555f2f22222ffff5222f52222fffffff22222fffffff5222222222222222ff22255ffff
+2222f222552222ff222222222225552f22222222f5ff22222222225fffff2222225fffff2222222222222222fff22222f5ff
+2222f222552222f222555222225552f2222222222f5f222222222222fff22222222f5ff52222222222222222ff2222222fff
+2222f2222f222ff22255552255522222222fff2225f222f22222f225f52222ff2222ff5222ffff222222222ffff222222fff
+f2222f222222ff222222222f52f2222fff2fff2222222fff22fff22222222fffff222f222ffffffffff222ffffffff2225f5
+f2222ff22222ff2222222222225222ff222ffff22222ffff22ffff222222f2ffff222222ff22ffffff2222ffffffff22255f
+ff22222f2222ff2222222f2222222ff2222fffff2222ffff2fffff2222ff22ffff22222ff2222fffff22222fff222222255f
+fff222222222fff2222fff2222222fff2222ffff22222ffff2fff22222ff222fff2222ff2222222ff222222ffff22222555f
+ffff22222222ffff222ffff222222ff22222ffff22222ffff22ff2222fff222ffff222fff222222f22222222fff22222555f
+ffff22222222ffff22ffffff22222fff22222fff222222ff2222f2222fff2222fff222ffff2222222225222fff22225255f5
+fffff52222222ffff22fff2222222ff2222222fff2222fff222222222fff22222ff222ffff2222ff2222522ffff22555555f
+fffff522222222ffff22222222522ff22222222ff2222fff222222222ff22222ff22222ffff22fffff222222fff225555ff5
+fffff222222222ffff22222255222fff2222222fff2222ff222255222fff222ff2222222fff2f2fffff2222ffff22255ffff
+ffff2222222222fffff2222255222ff22222222ff2222fff222255222fff22f2222252222fff222ffff2222fff22255fffff
+fff2222fff22222fffff222555222fff2225222ff22222ff222555222fff2f22222555222ff22222fff2222ffff22555f5ff
+fff222ff2ff22222fffff22255222ff22222222ff2222fff222252222fff2222225555222ff222222ff22222fff22552ffff
+fff222f222ff22222ffff22225222ff22222222f222222ff222522222ffff222222225222f2222222ff2222fff222225ffff
+fff22222222f222222ffff2225f22fff2222222f22222fff222222222fff2222222222222f2222522ff2222ffff22222ffff
+ffff222222ff222222ffff2222222fff222222ff22222fff222222222ffff2222222222fff2222222ff2222fff2222222fff
+fffff2222fff2252222fff2222222fff22222ff222222fff222222222ffff22222f222ffff2222222f22222ffff22f2225ff
+fffff2222ff22255222ffff22222ffffff222f2222222fff2222f2222ffff2222f2222ffffff2222ff22222ffffff22225f5
+fffff222fff222555222fff22222fffffffff2222222ffffffff222222ffffffff22222ffffff22f2222222fffff2222555f
+ffff2222ff2222555222fff22222222fffff222252222ffffff2222222fffffff22222222ffffff22222222fffff222255f5
+ffff222ff2222255f2222fff22222222fff222225522222fff2222252222ffff2222522222ffff22222522222ff22225555f
+ffff222ff2222555f5222ff22222222222f2222555222222f222255522222ff222255522222f2222225552222222222555f5
+ffff222ff222555fff222ff2222555522222255525fff22222225555ff2222222255555f522222255552f5f222222555f5ff
+ffff222ff22555f5ff22fff22255f5f222225555f5ff52222222555f525222222555f5f5f22222555555ff55222255555fff
+fffff22ff222255ff2222f222255f5ff52255552ffffff52225555f5ffff52225555f5ff5f22555552ff5fff5255555fffff
+fffff222f22222222222ff222255f5f5f555525f5ffffff555555f5ffff5f55555f5ffffff5f5552f5fffffff5f55f5fffff
+fffff222f2222222222fff22255f5ffffff5f5f5fffff5fff55f55fffffff5f555f5fffffff5f5ff5fffffffff5ff5f5ffff
+fffff2222ff2222222fff222255ffffff5ff5fffffffffffff5f5fffffffff5f5f5fffffffff5f5fffffffff5fff5fffffff
+fffff22222ff2f222fff22225555fffffffffffffffffffff5fffffffffffffff5ffffffff5ffff5ffffffffffffffffffff
+fffffff2222222222222225555ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff522222222222225555ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffff22222222225555525ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffff5525225255555f5fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffff5f5555555555fff5fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffff5ff55f5f5ff5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffff5ff5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 `;
         }
         return null;
@@ -652,58 +755,58 @@ f 4 f 6 3 6 6 3 6 f 4 f .
 
     helpers._registerFactory("animation", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "myAnim1":
-            case "anim3":return [img`
-. . . . . f f f f f . . . 
-. . . f f f f f f f f f . 
-. . f f f c f f f f f f . 
-. . f f c f f f c f f f f 
-f f c c f f f c c f f c f 
-f f f f f e f f f f c c f 
-. f f f e e f f f f f f f 
-. . f f e e f b f e e f f 
-. . . f 4 4 f 1 e 4 e f . 
-. . . f 4 4 4 4 e f f f . 
-. . . f f e e e e e f . . 
-. . . f 7 7 7 e 4 4 e . . 
-. . . f 7 7 7 e 4 4 e . . 
-. . . f 6 6 6 f e e f . . 
-. . . . f f f f f f . . . 
-. . . . . . f f f . . . . 
+            case "myAnim0":
+            case "anim2":return [img`
+. . . . f f f f . . . . . 
+. . f f f f f f f f . . . 
+. f f f f f f c f f f . . 
+f f f f f f c c f f f c . 
+f f f c f f f f f f f c . 
+c c c f f f e e f f c c . 
+f f f f f e e f f c c f . 
+f f f b f e e f b f f f . 
+. f 4 1 f 4 4 f 1 4 f . . 
+. f e 4 4 4 4 4 4 e f . . 
+. f f f e e e e f f f . . 
+f e f b 7 7 7 7 b f e f . 
+e 4 f 7 7 7 7 7 7 f 4 e . 
+e e f 6 6 6 6 6 6 f e e . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
 `, img`
 . . . . . . . . . . . . . 
-. . . . f f f f f f . . . 
-. . . f f f f f f f f f . 
-. . f f f c f f f f f f . 
-. f f f c f f f c f f f f 
-f f c c f f f c c f f c f 
-f f f f f e f f f f c c f 
-. f f f e e f f f f f f f 
-. . f f e e f b f e e f f 
-. . f f 4 4 f 1 e 4 e f . 
-. . . f 4 4 4 e e f f f . 
-. . . f f e e 4 4 e f . . 
-. . . f 7 7 e 4 4 e f . . 
-. . f f 6 6 f e e f f f . 
-. . f f f f f f f f f f . 
-. . . f f f . . . f f . . 
+. . . . . f f f f . . . . 
+. . . f f f f f f f f . . 
+. . f f f f f f c f f f . 
+f f f f f f f c c f f f c 
+f f f f c f f f f f f f c 
+. c c c f f f e e f f c c 
+. f f f f f e e f f c c f 
+. f f f b f e e f b f f f 
+. f f 4 1 f 4 4 f 1 4 f f 
+. . f e 4 4 4 4 4 e e f e 
+. f e f b 7 7 7 e 4 4 4 e 
+. e 4 f 7 7 7 7 e 4 4 e . 
+. . . f 6 6 6 6 6 e e . . 
+. . . f f f f f f f . . . 
+. . . f f f . . . . . . . 
 `, img`
 . . . . . . . . . . . . . 
-. . . . f f f f f f . . . 
-. . . f f f f f f f f f . 
-. . f f f c f f f f f f . 
-. f f f c f f f c f f f f 
-f f c c f f f c c f f c f 
-f f f f f e f f f f c c f 
-. f f f e e f f f f f f f 
-. f f f e e f b f e e f f 
-. . f f 4 4 f 1 e 4 e f f 
-. . . f 4 4 4 4 e f f f . 
-. . . f f e e e e 4 4 4 . 
-. . . f 7 7 7 7 e 4 4 e . 
-. . f f 6 6 6 6 f e e f . 
-. . f f f f f f f f f f . 
-. . . f f f . . . f f . . 
+. . . . f f f f . . . . . 
+. . f f f f f f f f . . . 
+. f f f c f f f f f f . . 
+c f f f c c f f f f f f f 
+c f f f f f f f c f f f f 
+c c f f e e f f f c c c . 
+f c c f f e e f f f f f . 
+f f f b f e e f b f f f . 
+f f 4 1 f 4 4 f 1 4 f f . 
+e f e e 4 4 4 4 4 e f . . 
+e 4 4 4 e 7 7 7 b f e f . 
+. e 4 4 e 7 7 7 7 f 4 e . 
+. . e e 6 6 6 6 6 f . . . 
+. . . f f f f f f f . . . 
+. . . . . . . f f f . . . 
 `];
             case "myAnim2":
             case "anim4":return [img`
@@ -811,58 +914,58 @@ f f c c c f c c c c c c f
 . . e e f f f f f f f e . 
 . . . . . . . . f f f . . 
 `];
-            case "myAnim0":
-            case "anim2":return [img`
-. . . . f f f f . . . . . 
-. . f f f f f f f f . . . 
-. f f f f f f c f f f . . 
-f f f f f f c c f f f c . 
-f f f c f f f f f f f c . 
-c c c f f f e e f f c c . 
-f f f f f e e f f c c f . 
-f f f b f e e f b f f f . 
-. f 4 1 f 4 4 f 1 4 f . . 
-. f e 4 4 4 4 4 4 e f . . 
-. f f f e e e e f f f . . 
-f e f b 7 7 7 7 b f e f . 
-e 4 f 7 7 7 7 7 7 f 4 e . 
-e e f 6 6 6 6 6 6 f e e . 
-. . . f f f f f f . . . . 
-. . . f f . . f f . . . . 
+            case "myAnim1":
+            case "anim3":return [img`
+. . . . . 1 1 1 1 1 . . . 
+. . . 1 1 1 1 1 1 1 1 1 . 
+. . 1 1 1 c 1 1 1 1 5 1 . 
+. . 1 1 c 1 1 1 c 5 6 5 1 
+1 1 5 c 1 1 1 c c 1 5 c 1 
+1 5 6 5 1 4 1 1 1 1 c c 1 
+. 1 5 1 4 4 1 1 1 1 1 1 1 
+. . 1 1 4 4 f b 1 e e 1 1 
+. . . f 4 4 f 1 4 4 e f . 
+. . . f 4 4 4 4 e f f f . 
+. . . f 7 3 7 3 7 3 f . . 
+. . . f 6 3 6 3 4 4 e . . 
+. . . f 7 3 7 3 4 4 e . . 
+. . . f 6 3 6 3 e e f . . 
+. . . . f f f f f f . . . 
+. . . . . . f f f . . . . 
 `, img`
 . . . . . . . . . . . . . 
-. . . . . f f f f . . . . 
-. . . f f f f f f f f . . 
-. . f f f f f f c f f f . 
-f f f f f f f c c f f f c 
-f f f f c f f f f f f f c 
-. c c c f f f e e f f c c 
-. f f f f f e e f f c c f 
-. f f f b f e e f b f f f 
-. f f 4 1 f 4 4 f 1 4 f f 
-. . f e 4 4 4 4 4 e e f e 
-. f e f b 7 7 7 e 4 4 4 e 
-. e 4 f 7 7 7 7 e 4 4 e . 
-. . . f 6 6 6 6 6 e e . . 
-. . . f f f f f f f . . . 
-. . . f f f . . . . . . . 
+. . . . 1 1 1 1 1 1 . . . 
+. . . 1 1 1 1 1 1 1 1 1 . 
+. . 1 1 1 c 1 1 1 1 5 1 . 
+. 1 1 1 c 1 1 1 c 5 6 5 1 
+1 1 5 c 1 1 1 c c 1 5 c 1 
+1 5 6 5 1 4 1 1 1 1 c c 1 
+. 1 5 1 4 4 1 1 1 1 1 1 1 
+. . 1 1 4 4 f b 1 e e 1 1 
+. . f f 4 4 f 1 4 4 e f . 
+. . . f 4 4 4 4 f f f f . 
+. . . f 7 3 7 4 4 e f . . 
+. . . f 6 3 6 4 4 e f . . 
+. . f f 7 3 7 e e f f f . 
+. . f f f f f f f f f f . 
+. . . f f f . . . f f . . 
 `, img`
 . . . . . . . . . . . . . 
-. . . . f f f f . . . . . 
-. . f f f f f f f f . . . 
-. f f f c f f f f f f . . 
-c f f f c c f f f f f f f 
-c f f f f f f f c f f f f 
-c c f f e e f f f c c c . 
-f c c f f e e f f f f f . 
-f f f b f e e f b f f f . 
-f f 4 1 f 4 4 f 1 4 f f . 
-e f e e 4 4 4 4 4 e f . . 
-e 4 4 4 e 7 7 7 b f e f . 
-. e 4 4 e 7 7 7 7 f 4 e . 
-. . e e 6 6 6 6 6 f . . . 
-. . . f f f f f f f . . . 
-. . . . . . . f f f . . . 
+. . . . 1 1 1 1 1 1 . . . 
+. . . 1 1 1 1 1 1 1 1 1 . 
+. . 1 1 1 c 1 1 1 1 5 1 . 
+. 1 1 1 c 1 1 1 c 5 6 5 1 
+1 1 5 c 1 1 1 c c 1 5 c 1 
+1 5 6 5 1 4 1 1 1 1 c c 1 
+. 1 5 1 4 4 1 1 1 1 1 1 1 
+. 1 1 1 4 4 f b 1 e e 1 1 
+. . 1 1 4 4 f 1 4 4 e 1 1 
+. . . f 4 4 4 4 4 f f f . 
+. . . f 7 3 7 3 7 4 4 e . 
+. . . f 6 3 6 3 6 4 4 e . 
+. . f f 7 3 7 3 7 e e f . 
+. . f f f f f f f f f f . 
+. . . f f f . . . f f . . 
 `];
         }
         return null;
